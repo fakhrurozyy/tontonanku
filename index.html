@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tontonanku — Personal Watchbook</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="Tontonanku Home">TONTONANKU</a>
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="#explore">Explore</a>
+        <a href="#profile">Profile</a>
+        <a href="#friends">Friends</a>
+        <a href="#memories">Memories</a>
+      </nav>
+      <div class="header-actions">
+        <button class="lang-toggle" id="langToggle" type="button">ID / EN</button>
+        <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#explore">Explore</a>
+      <a href="#profile">Profile</a>
+      <a href="#friends">Friends</a>
+      <a href="#memories">Memories</a>
+    </div>
+
+    <main>
+      <section id="home" class="hero section-frame">
+        <div class="hero-meta">
+          <span>PERSONAL WATCHBOOK</span>
+          <span>FILMS / SERIES / ANIME</span>
+          <span>SOCIAL WATCH PROFILE</span>
+        </div>
+        <h1>TONTONANKU</h1>
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="lead" data-id="heroLead">Website personal untuk mencatat, mengulas, memberi rating, dan membagikan film, series, serta anime yang pernah ditonton.</p>
+            <div class="hero-buttons">
+              <button class="primary-btn" data-open="loginModal">Login Dummy</button>
+              <a class="outline-btn" href="#explore">Explore Titles</a>
+            </div>
+          </div>
+          <div class="editorial-visual" aria-label="Editorial visual collage">
+            <div class="visual-large">WATCH<br/>BOOK</div>
+            <div class="visual-card one">DEEP TALK<br/><small>12 titles</small></div>
+            <div class="visual-card two">ANIME<br/><small>08 titles</small></div>
+            <div class="ticket-card">
+              <span>CINEMA MEMORY</span>
+              <strong>XXI JOGJA</strong>
+              <small>Seat C12 · 21.30</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats-strip section-frame">
+        <div><strong>126</strong><span>Watched</span></div>
+        <div><strong>38</strong><span>Reviews</span></div>
+        <div><strong>14</strong><span>Memories</span></div>
+        <div><strong>27</strong><span>Friends</span></div>
+      </section>
+
+      <section id="explore" class="section-frame">
+        <div class="section-head">
+          <p class="eyebrow">01 / EXPLORE</p>
+          <h2>DATABASE DUMMY FILM, SERIES & ANIME</h2>
+          <p>Cari judul, pilih status tontonan, kasih rating, lalu masuk ke profil personal.</p>
+        </div>
+        <div class="filter-bar">
+          <input id="searchInput" type="search" placeholder="Cari Interstellar, Gadis Kretek, Jujutsu Kaisen..." />
+          <select id="typeFilter" aria-label="Filter type">
+            <option value="all">All</option>
+            <option value="film">Film</option>
+            <option value="series">Series</option>
+            <option value="anime">Anime</option>
+          </select>
+        </div>
+        <div class="title-grid" id="titleGrid"></div>
+      </section>
+
+      <section id="playlists" class="section-frame split-section">
+        <div>
+          <p class="eyebrow">02 / PLAYLISTS</p>
+          <h2>CURATED LIKE A PLAYLIST</h2>
+          <p class="muted">Bukan sekadar daftar tontonan. Ini kurasi mood yang bisa dibuka cepat saat nongkrong.</p>
+        </div>
+        <div class="playlist-list">
+          <button class="playlist-row active" data-playlist="Deep Talk Films"><span>DEEP TALK FILMS</span><small>12 TITLES</small></button>
+          <button class="playlist-row" data-playlist="Midnight Series"><span>MIDNIGHT SERIES</span><small>08 TITLES</small></button>
+          <button class="playlist-row" data-playlist="Local Favorites"><span>LOCAL FAVORITES</span><small>10 TITLES</small></button>
+          <button class="playlist-row" data-playlist="Anime Arc"><span>ANIME ARC</span><small>09 TITLES</small></button>
+          <button class="playlist-row" data-playlist="Comfort Watch"><span>COMFORT WATCH</span><small>15 TITLES</small></button>
+        </div>
+      </section>
+
+      <section id="profile" class="section-frame profile-section">
+        <div class="profile-intro">
+          <p class="eyebrow">03 / USER PROFILE</p>
+          <h2>RAKA'S WATCHBOOK</h2>
+          <p>Mostly into thriller, emotional drama, anime arc yang rame dibahas, dan film lokal yang punya rasa personal.</p>
+          <div class="tag-wrap">
+            <span>THRILLER</span><span>DRAMA</span><span>ANIME</span><span>LOCAL FILMS</span><span>DEEP TALK</span>
+          </div>
+          <button class="primary-btn small" data-open="reviewModal">Add Review Dummy</button>
+        </div>
+        <div class="profile-panel">
+          <div class="profile-top">
+            <div class="avatar">R</div>
+            <div>
+              <h3>@raka.watch</h3>
+              <p>Joined 2026 · Yogyakarta</p>
+            </div>
+          </div>
+          <div class="profile-tabs">
+            <button class="tab active" data-tab="reviews">Reviews</button>
+            <button class="tab" data-tab="watchlist">Watchlist</button>
+            <button class="tab" data-tab="friendsTab">Friends</button>
+          </div>
+          <div class="tab-content active" id="reviews">
+            <article>
+              <strong>Interstellar</strong>
+              <span>9.5/10</span>
+              <p>Film yang selesai ditonton malah bikin ngobrol soal waktu, keluarga, dan penyesalan.</p>
+            </article>
+            <article>
+              <strong>Gadis Kretek</strong>
+              <span>8.8/10</span>
+              <p>Series Indonesia yang visualnya kuat dan cocok buat dibahas pelan-pelan.</p>
+            </article>
+          </div>
+          <div class="tab-content" id="watchlist">
+            <article><strong>Dark</strong><span>Watching</span><p>Timeline ribet, tapi nagih.</p></article>
+            <article><strong>Jujutsu Kaisen</strong><span>Watched</span><p>Arc yang gampang jadi bahan obrolan.</p></article>
+          </div>
+          <div class="tab-content" id="friendsTab">
+            <article><strong>@dinda.cinema</strong><span>Friend</span><p>Suka K-drama, romcom, dan cinema memories.</p></article>
+            <article><strong>@arya.anime</strong><span>Pending</span><p>Anime, seinen, dan list episode mingguan.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="friends" class="section-frame friends-section">
+        <div class="section-head">
+          <p class="eyebrow">04 / FRIENDS</p>
+          <h2>ADD FRIEND & LIHAT SELERA TONTONAN MEREKA</h2>
+        </div>
+        <div class="friends-grid" id="friendsGrid"></div>
+      </section>
+
+      <section id="memories" class="section-frame memories-section">
+        <div class="section-head">
+          <p class="eyebrow">05 / MEMORIES</p>
+          <h2>WATCH MEMORY PHOTO</h2>
+          <p>Upload foto tiket, suasana nonton, atau catatan pengalaman. Bukan buat streaming, tapi buat arsip personal.</p>
+        </div>
+        <div class="memory-grid">
+          <article class="memory-card">
+            <div class="memory-photo ticket-style">TICKET<br/><span>OPPENHEIMER</span></div>
+            <h3>Oppenheimer</h3>
+            <p>XXI Jogja City Mall · 22 Jul 2023</p>
+            <small>Keluar studio langsung pengen bahas moral, sejarah, dan rasa bersalah.</small>
+          </article>
+          <article class="memory-card">
+            <div class="memory-photo ticket-style alt">CINEMA<br/><span>JATUH CINTA</span></div>
+            <h3>Jatuh Cinta Seperti di Film-Film</h3>
+            <p>Empire XXI · 18 Des 2023</p>
+            <small>Romantis, kreatif, dan berasa personal banget.</small>
+          </article>
+          <article class="memory-card">
+            <div class="memory-photo ticket-style dark">ANIME<br/><span>JUJUTSU</span></div>
+            <h3>Jujutsu Kaisen 0</h3>
+            <p>Nonton bareng teman · 2022</p>
+            <small>Film anime yang cocok buat pembuka obrolan soal karakter favorit.</small>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer section-frame">
+      <h2>TONTONANKU</h2>
+      <p>Personal watch profile for films, series, anime, reviews, ratings, memories, and friends.</p>
+      <a href="#home">BACK TO TOP</a>
+    </footer>
+  </div>
+
+  <nav class="bottom-nav" aria-label="Mobile app navigation">
+    <a href="#home">Home</a>
+    <a href="#explore">Search</a>
+    <a href="#playlists">List</a>
+    <a href="#friends">Friends</a>
+    <a href="#profile">Profile</a>
+  </nav>
+
+  <div class="modal" id="loginModal" aria-hidden="true">
+    <div class="modal-card">
+      <button class="close-modal" data-close="loginModal">×</button>
+      <p class="eyebrow">DUMMY LOGIN</p>
+      <h2>Login ke Tontonanku</h2>
+      <label>Email / Username<input type="text" value="raka.watch" /></label>
+      <label>Password<input type="password" value="password" /></label>
+      <button class="primary-btn full" data-close="loginModal">Masuk Dummy</button>
+      <p class="muted small-text">Ini simulasi UI. Belum memakai backend asli.</p>
+    </div>
+  </div>
+
+  <div class="modal" id="reviewModal" aria-hidden="true">
+    <div class="modal-card">
+      <button class="close-modal" data-close="reviewModal">×</button>
+      <p class="eyebrow">ADD REVIEW</p>
+      <h2>Tambah ke Profil</h2>
+      <label>Judul<input type="text" value="Interstellar" /></label>
+      <label>Rating<input type="number" value="9.5" min="0" max="10" step="0.1" /></label>
+      <label>Review<textarea>Film yang bikin deep talk setelah nonton.</textarea></label>
+      <label>Memory Photo<input type="file" /></label>
+      <button class="primary-btn full" data-close="reviewModal">Simpan Dummy</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
